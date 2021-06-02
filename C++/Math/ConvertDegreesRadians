@@ -1,0 +1,3 @@
+float degrees = FMath::RadiansToDegrees(radians);
+
+float radians = FMath::DegreesToRadians(Degrees);
