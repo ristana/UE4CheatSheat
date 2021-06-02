@@ -1,0 +1,5 @@
+
+//pop something onto the screen
+float timeToPop = 0.25f;
+float ratio = GetRatio(CurrentTime, 0.f, TimeToPop); //will need to 
+float scale = FMath::Pow(Ratio, timeToPop);
