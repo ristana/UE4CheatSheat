@@ -1,0 +1,25 @@
+//simple ease in
+float EaseIn(float ratio, float easeRate = 2.0f)
+{
+  return FMath::Pow(Ratio, easeRate);
+}
+
+
+//simple ease out
+float EaseOut(float ratio, float easeRate = 2.0f)
+{
+  return 1.0f - FMath::Pow(1.0f - ratio, easeRate);
+}
+
+//simple ease in & out
+float EaseInOut(float ratio, float easeRate = 2.0f)
+{
+  if (ratio < 0.5f)
+  {
+    return 0.5f * FMath::Pow(2.0f * ratio, easeRate);
+  }
+  else
+  {
+    return 1.0f - (0.5f * FMath::Pow(2.0f * (1.0f - ratio)), easeRate);
+  }
+}
