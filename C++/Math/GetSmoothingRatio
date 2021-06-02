@@ -1,0 +1,13 @@
+float GetSmoothingRatio(float ratio, float deltaSeconds, float authoredFPS = 60.0f)
+{
+  float timeRatio = deltaSeconds * authoredFPS;
+  
+  if ((ratio > 0.0f) && (timeRatio > 0.0f))
+  {
+    return FMath::Pow(ratio, timeRatio);
+  }
+  else
+  {
+    return ratio;
+  }
+}
