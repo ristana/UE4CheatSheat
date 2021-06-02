@@ -1,0 +1,11 @@
+float GetRatioSafe(float value, float maximum)
+{
+  if (value <= 0)
+  {
+    return 0.f;
+  }
+  else
+  {
+    return (value / maximum)
+  }
+}
