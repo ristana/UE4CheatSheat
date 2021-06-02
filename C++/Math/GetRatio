@@ -1,0 +1,15 @@
+float GetRatio(float value, float minimum, float maximum, bool clamp = true)
+{
+  if (value > maximum && clmap == true)
+  {
+    return 1.0f;
+  }
+  else if (value > minimum)
+  {
+    return (value - minimum) / (maximum - minimum)
+  }
+  else
+  {
+    return 0.0f;
+  }
+}
