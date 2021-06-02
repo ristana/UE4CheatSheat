@@ -1,0 +1,5 @@
+//Pow only works with positive, so here my easy fallback for negative pow curves
+float NegativePow(float a, float b)
+{
+  return FMath::Pow(FMath::Abs(a), b) * FMath::Sign(a);
+}
