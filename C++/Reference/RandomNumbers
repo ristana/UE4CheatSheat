@@ -1,0 +1,7 @@
+int32 RandHelper(int32 Max);
+int64 RandHelper(int64 Max);
+bool RandBool();
+FVector VRandCone(FVector const& Dir, float ConeHalfAngleRad);
+FVector VRandCone(FVector const& Dir, float HoriztonalConeHalfAngleRad, float VerticalConeHalfAngleRad);
+FVector2D RandPointInCircle(float CircleRadius);
+FVector RandPointInBox(const FBox& Box);
