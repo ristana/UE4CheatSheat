@@ -1,0 +1,28 @@
+# Perforce File Type Mapping Specifications.
+#
+#  TypeMap:	a list of filetype mappings; one per line.
+#		Each line has two elements:
+#
+#  		Filetype: The filetype to use on 'p4 add'.
+#
+#  		Path:     File pattern which will use this filetype.
+#
+# See 'p4 help typemap' for more information.
+
+TypeMap:
+	binary+S10 //depot/.../*.umap
+	binary+S1w //depot/.../*.lib
+	binary+S1w //depot/.../*.dll
+	binary+S1w //depot/.../*.pdb
+	binary+S1wx //depot/.../*.exe
+	text+w //depot/.../*.config
+	text+w //depot/.../*.version
+	text+w //depot/.../*.modules
+	text+w //depot/.../*.target
+	text+w //depot/.../*.References
+	text+w //depot/.../UnrealBuildTool.cs
+	text+w //depot/.../UnrealBuildTool.csproj
+	text+w //depot/.../UnrealBuildTool.xml
+	text+w //depot/.../BuildGraph.Automation.csproj
+	text+w //depot/.../BuildGraph.Automation.xml
+	binary+w //depot/Engine/Binaries/.../*.exp
