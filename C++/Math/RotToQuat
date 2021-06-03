@@ -1,0 +1,5 @@
+FRotator = rotatorVar;
+FQuat = quaternionVar;
+
+rotatorVar = quaternionVar.Rotator();
+quaternionVar = rotatorVar.Quaternion();
