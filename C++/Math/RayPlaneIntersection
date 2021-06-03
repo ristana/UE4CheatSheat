@@ -1,0 +1,23 @@
+FVector intersection;
+
+bool RayPlaneIntersection(const FVector& rayOrigin, const FVector& rayDirection, const FVector& planeOrigin, const FVector& planeNormal, FVector& intersection)
+{
+  float cosAlpha = FVector::DotProduct(rayDirection, planeNormal);
+  
+  if (cosAlpha >= 0.0f)
+  {
+    return false;
+  }
+  
+  float dotDifference = FVector::DotProduct(planeNormal, planeOrigin - rayOrigin);
+  float delta = dotDifference / cosAlpha;
+  
+  if (delta < 0.0f)
+  {
+    return false;
+  }
+  
+  intersection = rayOrigin + (rayDirection * delta);
+  
+  return true;
+}
