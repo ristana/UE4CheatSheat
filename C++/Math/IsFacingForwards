@@ -1,0 +1,7 @@
+bool IsFacingForwards(const FVector& targetDirection, const FVector& compareDirection, float angleRange)
+{
+  float dotResult = FVector::DotProduct(targetDirection, compareDirection);
+  float angleResult = FMath::RadiansToDegrees(FMath::Acos(dotResult));
+  
+  return (angleResult < angleRange);
+}
