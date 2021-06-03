@@ -1,0 +1,4 @@
+bool IsInFront(const FVector& point, const FVector& of, const FVector& direction)
+{
+  return (FVector::DotProduct(point - of, direction) > 0.0f);
+}
