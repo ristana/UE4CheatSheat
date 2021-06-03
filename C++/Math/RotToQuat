@@ -1,5 +1,12 @@
 FRotator = rotatorVar;
 FQuat = quaternionVar;
 
+/**
+* angles will be in -180 and +180 degrees
+* accumulated rotation data will be lost on conversion
+*/
+
 rotatorVar = quaternionVar.Rotator();
 quaternionVar = rotatorVar.Quaternion();
+
+rotatorVar.Normalize(); //if we want to get -180:+180 range w/o an FQuat conversion
