@@ -1,0 +1,5 @@
+FMath::Lerp(); //SHORTEST distance between 2 rotators
+
+FMath::LerpRange(); //full range of angles, but normalizes (you can create a copy of this and remove normalization to get things like double rolls to occur in lerp)
+
+FMath::RInterpTo; //not the most accurate
