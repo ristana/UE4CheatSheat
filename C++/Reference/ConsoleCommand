@@ -1,0 +1,6 @@
+static FAutoConsoleCommand CConsoleCommand1(
+TEXT("OurGame.Command1"),
+TEXT("Performs no function yet."
+FConsoleCommandWithWorldArgsAndOutputDeviceDelegate::CreateStatic(OurGameCommand1),
+ECVF_Default
+);
