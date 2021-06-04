@@ -1,0 +1,16 @@
+UFUNCTION(BlueprintCallable, Category Example)
+void TestFunction(
+  const TArry<float>& InParam1,                    // Input parameter, required
+  UParam(ref) TArray<float>& InParam2,             // Input parameter, required
+  const AActor* InParam3,                          // Input parameter, not required
+  UPARAM(ref) AActor* InParam4,                    // Input Parameter, required
+  AActor* InParam5,                                // Input Parameter, not required
+  const int32 InParam6,                            // Input Parameter, not required
+  UPARAM(ref) int32 InParam7,                      // Input Parameter, required
+  int32 InParam8,                                  // Input Parameter, not required
+  const int32& InParam9,                           // Input Parameter, required
+  
+  TArray<float& OutParam1,                         // Output parameter
+  AActor*& OutParam2,                              // Output Parameter
+  int32& OutParam3                                 // Output Parameter
+);
