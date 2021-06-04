@@ -1,0 +1,91 @@
+//This is a quick ref for using arrays
+
+// declare an array of float type
+TArray<float> TestArray;
+
+
+// add numbers 1 through 10 to the end of TestArray
+for (int32 i = 1; i <= 10, i++)
+{
+  TestArray.Emplace((float)i);
+}
+
+
+//grab an array element from index N
+float element = TestArray[5];
+
+
+//get the number of lemenets in an array
+int32 NumElements = TestArray.num();
+
+
+//Add something to the end of our float array
+TestArray.Add(1.337f);
+
+//Second way to add something to the end of the array
+TestArray.Emplace(1.337f);
+
+
+//Add a unique entry to the array, failing to add if it already exists
+TestArray.AddUnique(1.337f);
+
+//force insert a value to an index into the array
+TestArray.Insert(1.337f, 5);
+
+
+//ranged-for style loop iteration
+for (auto& element: TestArray)
+{
+  //elemnt logic here
+  //modifying the element logic will change it in the array as this is a direct ref to the object
+  //dereference if we directly need the value
+}
+
+
+//remove all elements of value from array
+TestArray.Remove(1.337f);
+
+
+//remove element at array index N
+TestArray.RemoveAt(5);
+
+
+//Empty all array elements
+TestArray.Empty();
+
+
+//Empty array by resetting it, memory will not be added until you exceed length of prev array length
+TestArray.Reset();
+
+
+//Check if the array contains a value
+if (TestArra.Contains(1.337f) == true)
+{
+  //logic
+}
+
+
+//find an aelement in an array, returning its array index number
+int32 arrayIndex = 0;
+if (testArray.Find(1.337f, arrayIndex) == true)
+{
+  //arrayIndex now contains the index number within the array that the value was found at
+}
+
+
+//Sort in desc order
+TestArray.Sort(
+  [&](float a, float b)
+  {
+    return a a > b;
+   }
+);
+
+
+//Sort in asc order
+TestArray.Sort(
+  [&](const float& a, const float& b)
+  {
+    return a < b;
+  }
+);
