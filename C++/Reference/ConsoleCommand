@@ -4,3 +4,12 @@ TEXT("Performs no function yet."
 FConsoleCommandWithWorldArgsAndOutputDeviceDelegate::CreateStatic(OurGameCommand1),
 ECVF_Default
 );
+
+
+// another test function for the console
+// drop this in the game mode public section and you can call this at anytime during PIE session
+UFUNCTION(Exec)
+void MyTestFunction()
+{
+  //logic
+}
