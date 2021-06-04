@@ -72,17 +72,24 @@ if (testArray.Find(1.337f, arrayIndex) == true)
   //arrayIndex now contains the index number within the array that the value was found at
 }
 
+//Sort in asc order
+TestArray.Sort(
+  [&](float a, float b)
+  {
+    return a > b;
+  }
+);
 
 //Sort in desc order
 TestArray.Sort(
   [&](float a, float b)
   {
-    return a a > b;
+    return a > b;
    }
 );
 
 
-//Sort in asc order
+//Sort in asc order using const refs, very useful for larger or complext data types
 TestArray.Sort(
   [&](const float& a, const float& b)
   {
