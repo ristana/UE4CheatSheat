@@ -26,3 +26,11 @@ static TAutoConsoleVariable<int32> CVarExtraMagnetism(
 	TEXT("  0: no extra magnetism\n")
 	TEXT("  1: extra magnetism\n"),
 	ECVF_Scalability | ECVF_RenderThreadSafe);
+
+
+
+/**
+To set default console variables, edit DefaultEngine.ini with the following syntax
+*************************/
+[SystemSettings]
+OurGame.ExtraMagnetism=1
