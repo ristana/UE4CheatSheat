@@ -30,7 +30,8 @@ static TAutoConsoleVariable<int32> CVarExtraMagnetism(
 
 
 /**
-To set default console variables, edit DefaultEngine.ini with the following syntax
+To set default console variables, edit DefaultEngine.ini with the syntax listed below.
+If the section does not already exist, add it to the bottom of the file
 *************************/
 [SystemSettings]
 OurGame.ExtraMagnetism=1
